@@ -32,10 +32,10 @@ public abstract class ActionBase {
      * @param servletResponse
      */
     public void init(
-            ServletContext servletContex,
+            ServletContext servletContext,
             HttpServletRequest servletRequest,
             HttpServletResponse servletResponse) {
-        this.context = servletContex;
+        this.context = servletContext;
         this.request = servletRequest;
         this.response = servletResponse;
     }
@@ -240,4 +240,5 @@ public abstract class ActionBase {
     protected <R> R getContextScope(PropertyConst key) {
         return (R) context.getAttribute(key.getValue());
     }
+
 }
